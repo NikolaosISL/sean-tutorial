@@ -65,11 +65,31 @@ if (!place_meeting(x, y + 1, oWall))
 }
 else if (move != 0)
 {
+	if (sprite_index == sPlayerA)
+	{
+		repeat(5)
+		{
+			with (instance_create_layer(x, bbox_bottom, "Bullets", oDust))
+			{
+				vsp = 0;
+			}
+		}
+	}
 	canjump = 10;
 	sprite_index = sPlayerR;
 }
 else
 {
+	if (sprite_index == sPlayerA)
+	{
+		repeat(5)
+		{
+			with (instance_create_layer(x, bbox_bottom, "Bullets", oDust))
+			{
+				vsp = 0;
+			}
+		}
+	}
 	canjump = 10;
 	sprite_index = sPlayer;
 }
