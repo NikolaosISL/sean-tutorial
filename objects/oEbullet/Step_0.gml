@@ -3,15 +3,9 @@
 x += lengthdir_x(spd, direction);
 y += lengthdir_y(spd, direction);
 
-if (place_meeting(x, y, oEnemy))
+if (place_meeting(x, y, oPlayer))
 {
 	var colliding_enemy_id = instance_place(x, y, oEnemy);
-	with (colliding_enemy_id)
-	{
-		hp--;
-		flash = 3;
-		hitFrom = other.direction;
-	}
 	
 	instance_destroy();
 }
